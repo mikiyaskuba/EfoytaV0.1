@@ -1,0 +1,44 @@
+/* Efoyta investor conversion layer. Load AFTER styles.css. */
+.ann-link{text-decoration:underline;text-underline-offset:3px;margin-left:4px}
+.button-ghost{background:transparent;color:#fff;border:1px solid #ffffff55}.button-ghost:hover{background:#ffffff14}
+.button-line{background:transparent;color:#fff;border:1px solid #ffffff55}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.rv.in{opacity:1;transform:none}
+.metric-card.rv.in:hover{background:#eef2e3}
+
+.why{background:var(--paper)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.why-card{padding:28px 26px 30px;background:var(--cream);border:1px solid var(--line);border-top:3px solid var(--lime)}
+.why-n{font-size:10px;font-weight:700;color:#87977a}
+.why-card h3{font-family:var(--display);font-size:20px;letter-spacing:-.04em;margin:14px 0 8px;color:var(--forest)}
+.why-card p{font-size:13px;line-height:1.8;color:#68766a;margin:0}
+.unlock{display:grid;grid-template-columns:.9fr 1.1fr;margin-top:15px;border:1px solid var(--line)}
+.unlock-ask{background:var(--forest);color:#fff;padding:36px 34px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.unlock-ask strong{font-family:var(--display);font-size:24px;line-height:1.25;letter-spacing:-.04em}
+.unlock-ask small{color:#b9cbb8;font-size:12px;line-height:1.7;margin-bottom:12px}
+.unlock-label{font-size:9px;letter-spacing:.16em;font-weight:700;color:var(--lime)}.unlock-label.dark{color:#70834f}
+.unlock-list{padding:34px;background:#fbfaf5}
+.unlock-list ul{list-style:none;margin:16px 0 0;padding:0}
+.unlock-list li{padding:13px 0 13px 22px;border-top:1px solid var(--line);font-size:13px;line-height:1.7;color:#68766a;position:relative}
+.unlock-list li:before{content:"";position:absolute;left:0;top:21px;width:7px;height:7px;border-radius:50%;background:#8ba548}
+.unlock-list li b{color:var(--forest)}
+.steps{margin-top:15px;padding:26px 34px 30px;background:#e9eedc}
+.steps ol{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:16px 0 0;padding:0}
+.steps li{counter-increment:s;position:relative;padding-left:44px;font-size:14px;color:var(--forest)}
+.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--forest);color:var(--lime);display:grid;place-items:center;font-weight:700;font-size:13px}
+.steps small{display:block;font-size:12px;color:#647268;margin-top:3px;line-height:1.6}
+
+.form-trust{font-size:11px;color:#4e713c;margin:12px 0 0}
+.invest-ctas{flex-wrap:wrap}
+
+.sticky-cta{position:fixed;left:50%;bottom:16px;transform:translate(-50%,140%);z-index:60;display:flex;align-items:center;gap:12px;background:var(--forest);color:#fff;padding:10px 10px 10px 22px;border-radius:6px;box-shadow:0 14px 40px #071b1166;transition:transform .35s ease;max-width:calc(100vw - 24px)}
+.sticky-cta.show{transform:translate(-50%,0)}
+.sticky-cta p{margin:0;font-size:12px;line-height:1.4}.sticky-cta p span{color:#b9cbb8}
+.sticky-cta .button{min-height:42px;white-space:nowrap}
+
+@media(max-width:760px){
+  .why-grid,.unlock,.steps ol{grid-template-columns:1fr}
+  .unlock-ask,.unlock-list{padding:26px 22px}.steps{padding:24px 22px}
+  .sticky-cta{left:12px;right:12px;bottom:12px;transform:translateY(140%);padding:10px;justify-content:space-between}
+  .sticky-cta.show{transform:none}
+  .sticky-cta p{display:none}.sticky-cta .button{flex:1;padding:0 10px;gap:8px}
+}
